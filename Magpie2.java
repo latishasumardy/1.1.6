@@ -83,7 +83,7 @@ public class Magpie2
             {
                 return psn;
             }
-            System.out.println(psn + ", " + before + ", " + after);
+            
             // The last position didn't work, so let's find
             // the next, if there is one.
             psn = phrase.indexOf(goal.toLowerCase(),
