@@ -18,11 +18,7 @@ public class Magpie2
      */
     public String getGreeting()
     {
-        findKeyword("She's my sister", "sister", 0);
-        findKeyword("Brother Tom is helpful", "brother", 0);
-        findKeyword("I can't catch wild cats.", "cat", 0);
-        findKeyword("I know nothing about snow plows." ,"no", 0);
-
+        
         return "Hello, let's talk.";
     }
     
@@ -141,12 +137,12 @@ public class Magpie2
         {
                  response = "Tell me more about your family.";
         }
-        else if (statement.indexOf("dog") >= 0
-                || statement.indexOf("cat") >= 0)
+        else if (findKeyword(statement,"dog") >= 0
+                || findKeyword(statement,"cat") >= 0)
         {
                 response = "Tell me more about your pets.";
         }
-        else if (statement.indexOf("Kaehms") >= 0)
+        else if (findKeyword(statement,"Kaehms") >= 0)
         {
                 response = "He sounds like a good teacher.";
         }
